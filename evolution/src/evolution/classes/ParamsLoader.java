@@ -13,14 +13,13 @@ import com.google.gson.Gson;
 
 public class ParamsLoader {
 
-	public int initial_animals;
-	public int starting_energy;
-	public int world_height;
-	public int world_width;
-	public float jungle_steppe_ratio;
-	
+	private int initial_animals;
+	private int starting_energy;
+	private int world_height;
+	private int world_width;
+	private float jungle_steppe_ratio;
 
-	
+
 	public ParamsLoader(int initial_animals, int starting_energy, int world_height, int world_width,
 			float jungle_steppe_ratio) {
 		this.initial_animals = initial_animals;
@@ -28,6 +27,26 @@ public class ParamsLoader {
 		this.world_height = world_height;
 		this.world_width = world_width;
 		this.jungle_steppe_ratio = jungle_steppe_ratio;
+	}
+	
+	public int getInitial_animals() {
+		return initial_animals;
+	}
+
+	public int getStarting_energy() {
+		return starting_energy;
+	}
+
+	public int getWorld_height() {
+		return world_height;
+	}
+
+	public int getWorld_width() {
+		return world_width;
+	}
+
+	public float getJungle_steppe_ratio() {
+		return jungle_steppe_ratio;
 	}
 
 	@Override
