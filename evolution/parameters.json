@@ -1,11 +1,7 @@
 {
-  "animal": {
-    "initial_animals": 10,
-    "starting_energy": 50
-  },
-  "world": {
-    "height": 150,
-    "width": 150,
-    "jungle_steppe_ratio": 0.2
-  }
+	"initial_animals": 10,
+	"starting_energy": 50,
+	"world_height": 150,
+	"world_width": 150,
+	"jungle_steppe_ratio": 0.2
 }

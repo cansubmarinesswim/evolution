@@ -1,11 +1,9 @@
 package evolution.classes;
 
-import java.awt.List;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 public class Dna {
 
@@ -23,7 +21,6 @@ public class Dna {
 	public ArrayList<Integer> getSequence() {
 		return sequence;
 	}
-
 	
 	private ArrayList<Integer> generateSequence(){
 		/*
@@ -37,10 +34,9 @@ public class Dna {
 		 * But I know that it's slower.
 		 */
 		ArrayList<Integer> sequence = new ArrayList<>();
-		Random random = new Random();
 		
-		ArrayList<Integer> range = new ArrayList<>(this.DNA_LENGTH - 1);
-		for(int i = 1; i < this.DNA_LENGTH -1; i++){
+		ArrayList<Integer> range = new ArrayList<>(Dna.DNA_LENGTH - 1);
+		for(int i = 1; i < Dna.DNA_LENGTH -1; i++){
 			range.add(i);
 		}
 		Collections.shuffle(range);
@@ -48,7 +44,7 @@ public class Dna {
 		ArrayList<Integer> divisionIndexes = (ArrayList<Integer>) range.stream().limit(7).sorted().collect(Collectors.toList());
 		
 		int direction = 0;
-		for (int i=0 ; i<this.DNA_LENGTH; i++) {
+		for (int i=0 ; i<Dna.DNA_LENGTH; i++) {
 			sequence.add(direction);
 			if(divisionIndexes.contains(i)) {
 				direction++;
@@ -104,23 +100,15 @@ public class Dna {
 		Collections.sort(sequence);	
 		return sequence;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
 
 	public static void main(String[] args) {
+		/*
+		 * Testing constructors
+		 */
 		Dna mom = new Dna();
 		Dna dad = new Dna();
 		
 		Dna son = new Dna(mom,dad);
-		
-
-		
 	}
 	
 }
