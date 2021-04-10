@@ -80,9 +80,9 @@ public class Dna {
 		sequence.addAll(dadsDna.subList(splittingIndexes[0], splittingIndexes[1]));
 		
 		if(random.nextInt() % 2 == 0) {
-			sequence.addAll(momsDna.subList(splittingIndexes[1], this.DNA_LENGTH));
+			sequence.addAll(momsDna.subList(splittingIndexes[1], Dna.DNA_LENGTH));
 		} else {
-			sequence.addAll(dadsDna.subList(splittingIndexes[1], this.DNA_LENGTH));
+			sequence.addAll(dadsDna.subList(splittingIndexes[1], Dna.DNA_LENGTH));
 		}
 
 		for (int gene =0; gene<=7; gene++) {
@@ -99,6 +99,11 @@ public class Dna {
 		}
 		Collections.sort(sequence);	
 		return sequence;
+	}
+
+	@Override
+	public String toString() {
+		return "Dna [sequence=" + sequence + "]";
 	}
 
 	public static void main(String[] args) {
