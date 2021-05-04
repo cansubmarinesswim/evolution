@@ -35,10 +35,10 @@
     </left>
 
     <center>
-        <Pane style="-fx-border-color: red; -fx-border-width: 3; -fx-border-style: dashed">
-            <TilePane prefWidth="40" prefHeight="40" style="-fx-border-color: green; -fx-border-width: 3; -fx-border-style: dashed">
+        <Pane style="-fx-border-color: red; -fx-border-width: 3; -fx-border-style: dashed" fx:id="mapRegion">
+<!--            <TilePane prefWidth="40" prefHeight="40" style="-fx-border-color: green; -fx-border-width: 3; -fx-border-style: dashed">-->
 
-            </TilePane>
+<!--            </TilePane>-->
         </Pane>
     </center>
 

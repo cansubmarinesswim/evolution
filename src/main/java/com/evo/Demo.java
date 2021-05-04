@@ -21,16 +21,7 @@ public class Demo extends Application {
 
 
 		Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("sample.fxml"));
-//		GridPane root = new GridPane();
-//		root.setAlignment(Pos.CENTER);
-//		root.setVgap(10);
-//		root.setHgap(10);
-//
-//
-//		Label greeting = new Label("Siemanko");
-//		greeting.setTextFill(Color.GREEN);
-//		greeting.setFont(Font.font("Times New Roman", FontWeight.BOLD, 20));
-//		root.getChildren().add(greeting);
+
 
 		Scene scene = new Scene(root, 800, 400);
 		stage.setTitle("Evolution");

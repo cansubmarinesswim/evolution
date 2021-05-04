@@ -1,14 +1,16 @@
 package com.evo;
 
 import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.stream.Collectors;
 
 public abstract class Tile {
 
-	private int x;
-	private int y;
-	private boolean isJungle;
-	private boolean hasGrass;
-	private ArrayList<Animal> animalsOnTile;
+	public int x;
+	public int y;
+	public boolean isJungle;
+	public boolean hasGrass;
+	public ArrayList<Animal> animalsOnTile;
 
 	public Tile(int x, int y, boolean isJungle) {
 		this.x = x;
@@ -21,10 +23,20 @@ public abstract class Tile {
 	private ArrayList<Animal> getAnimalsOnTile() {
 		return animalsOnTile;
 	}
-
-	private void setAnimalsOnTile(ArrayList<Animal> animalsOnTile) {
-		this.animalsOnTile = animalsOnTile;
+	public ArrayList<Animal> getAnimalsSortedByEnergy() {
+		ArrayList<Animal> sortedByEnergy = (ArrayList<Animal>) this.animalsOnTile.stream()
+				.sorted(Comparator.comparing(Animal::getCurrentEnergy))
+				.collect(Collectors.toList());
+		return sortedByEnergy;
 	}
+
+	public void addAnimalOnTile(Animal animal) {
+		this.animalsOnTile.add(animal);
+	}
+	public void removeAnimalFromTile(Animal animal){
+		this.animalsOnTile.remove(animal);
+	}
+
 
 	private int getX() {
 		return x;
