@@ -103,7 +103,7 @@ public class Dna {
 
 	@Override
 	public String toString() {
-		return "com.evo.Dna [sequence=" + sequence + "]";
+		return sequence.toString() ;
 	}
 
 	public static void main(String[] args) {

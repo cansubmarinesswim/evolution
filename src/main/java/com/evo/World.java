@@ -8,13 +8,14 @@ import java.util.stream.Stream;
 
 public class World {
 
+	public int epoch;
 	int worldHeight;
 	int worldWidth;
 	float jungleSteppeRatio;
 	ArrayList<ArrayList<Tile>> mapGrid;
 	int plantEnergy;
-	List<Animal> livingAnimals;
-	List<Animal> deadAnimals;
+	public List<Animal> livingAnimals;
+	public List<Animal> deadAnimals;
 
 	private int jungleLeftBoundary;
 	private int jungleRightBoundary;
@@ -22,6 +23,7 @@ public class World {
 	private int jungleLowerBoundary;
 
 	public World(int worldHeight, int worldWidth, float jungleSteppeRatio, int startingEnergy, int initialAnimals, int plantEnergy) {
+		this.epoch = 0;
 		this.worldHeight = worldHeight;
 		this.worldWidth = worldWidth;
 		this.jungleSteppeRatio = jungleSteppeRatio;

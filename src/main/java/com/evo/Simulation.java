@@ -10,24 +10,15 @@ public class Simulation {
 
 	public Parameters parameters;
 	public World world;
-//	List<Animal> livingAnimals;
-//	List<Animal> deadAnimals;
 
-	public Simulation(Parameters parameters) {
-		this.parameters = parameters;
+	public Simulation() {
+		this.parameters = GsonFromJson.LoadParams();
 		this.world = new World(parameters.getWorldHeight(),
 				parameters.getWorldWidth(),
 				parameters.getJungleRatio(),
 				parameters.getStartingEnergy(),
 				parameters.getInitialAnimals(),
 				parameters.getPlantEnergy());
-//		this.livingAnimals = Stream.
-//							generate(() -> new Animal(
-//								parameters.getStartingEnergy(),
-//								this.world)).
-//							limit(parameters.getInitialAnimals()).
-//							collect(Collectors.toList());
-//		this.deadAnimals = new ArrayList<>();
 	}
 
 	@Override
@@ -40,7 +31,7 @@ public class Simulation {
 				'}';
 	}
 
-	void runEpoch(int milisecondsDelay) throws InterruptedException {
+	public void runEpoch(){
 		/*
 		One epoch in world history
 		 1. Dead animals rot,
@@ -69,6 +60,7 @@ public class Simulation {
 
 		// Stage 5
 		this.world.growGrass();
+		this.world.epoch++;
 
 		//Debug printing
 //		for (Animal a: world.livingAnimals) {
@@ -77,18 +69,16 @@ public class Simulation {
 //		for (Animal a: world.deadAnimals) {
 //			System.out.println(a.ID);
 //		}
-		System.out.println("Total living animals: " + world.livingAnimals.size());
-		System.out.println("Total dead animals: " + world.deadAnimals.size());
-		this.world.printWorld();
-		TimeUnit.MILLISECONDS.sleep(milisecondsDelay);
+//		System.out.println("Total living animals: " + world.livingAnimals.size());
+//		System.out.println("Total dead animals: " + world.deadAnimals.size());
+//		this.world.printWorld();
 	}
 
 	public static void main(String[] args) throws InterruptedException {
-		Parameters parameters = GsonFromJson.LoadParams();
-		Simulation simulation = new Simulation(parameters);
-		for (int i = 0; i < 300; i++) {
-			simulation.runEpoch(1);
-			System.out.println();
+		Simulation simulation = new Simulation();
+		for (int i = 0; i < 10; i++) {
+			simulation.runEpoch();
+			System.out.println(simulation.world.epoch);
 		}
 	}
 }

@@ -1,9 +1,9 @@
 {
-	"initialAnimals": 50,
+	"initialAnimals": 10,
 	"startingEnergy": 50,
-	"worldHeight": 30,
-	"worldWidth": 30,
-	"jungleRatio": 0.2,
+	"worldHeight": 40,
+	"worldWidth": 40,
+	"jungleRatio": 0.1,
 	"moveEnergy": 1,
 	"plantEnergy": 40
 }

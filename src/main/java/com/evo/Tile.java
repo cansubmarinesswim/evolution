@@ -30,6 +30,17 @@ public abstract class Tile {
 		return sortedByEnergy;
 	}
 
+	@Override
+	public String toString() {
+		if(animalsOnTile.size() != 0) {
+			return "Animals on tile:\n" +
+					animalsOnTile;
+		} else if (this.hasGrass){
+			return "Grass, please don't step!";
+		}
+		return "Tile has no animals";
+	}
+
 	public void addAnimalOnTile(Animal animal) {
 		this.animalsOnTile.add(animal);
 	}

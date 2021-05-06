@@ -54,7 +54,7 @@ public class Animal {
 
 	@Override
 	public String toString() {
-		return "Animal [ID=" + ID + ",\n position=" + position + ",\n currentEnergy=" + currentEnergy + ",\n startingEnergy="
+		return "ID=" + ID + ",\n position=" + position + ",\n currentEnergy=" + currentEnergy + ",\n startingEnergy="
 				+ startingEnergy + ",\n dna=" + dna + ",\n offspring=" + offspring + ",\n isAlive=" + isAlive + "]";
 	}
 
@@ -190,7 +190,7 @@ public class Animal {
 
 		@Override
 		public String toString() {
-			return "Coordinates [x=" + x + ", y=" + y + ", direction=" + direction + "]";
+			return "(x=" + x + ", y=" + y + ", direction=" + direction + ")";
 		}
 		
 		public void stepForwad() {
