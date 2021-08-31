@@ -1,0 +1,10 @@
+{
+	"initialAnimals": 80,
+	"startingEnergy": 20,
+	"worldHeight": 40,
+	"worldWidth": 40,
+	"jungleRatio": 0.1,
+	"moveEnergy": 1,
+	"plantEnergy": 40,
+	"simulationSpeed" : 50
+}

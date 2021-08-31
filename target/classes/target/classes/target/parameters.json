@@ -1,0 +1,7 @@
+{
+	"initial_animals": 10,
+	"starting_energy": 50,
+	"world_height": 100,
+	"world_width": 100,
+	"jungle_steppe_ratio": 0.4
+}
