@@ -1,5 +1,6 @@
 # Evolution
 Evolution simulation project created for Object Oriented Programming class @ AGH UST.
+
 Details (in polish) can be found [here](https://github.com/apohllo/obiektowe-lab/blob/master/proj1/Readme.md). 
 Simulation parameters can be set in `parameters.json` file.
 
